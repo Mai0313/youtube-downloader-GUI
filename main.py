@@ -60,4 +60,4 @@ def main(target):
         yt.get_highest_res_video(target)
 
 if __name__ == "__main__":
-    main("https://www.youtube.com/shorts/5TIalQYhzLA")
+    YouTubeDownloader("downloads").get_video("https://www.youtube.com/watch?v=l4C4Ucwtqe0&ab_channel=%E5%9A%BC%E8%B1%86", "720p")
