@@ -20,7 +20,10 @@ class YouTubeDownloader:
             None
         """
         yt = YouTube(url)
-        yt.streams.filter(file_extension="mp4").get_by_resolution(res).download(self.output_path, skip_existing = True)
+        try:
+            yt.streams.filter(file_extension="mp4").get_by_resolution(res).download(self.output_path, skip_existing = True)
+        except AttributeError:
+            print(f"Video at {url} does not have a {res} stream.")
 
     def get_highest_res_video(self, url: str):
         """Download the highest resolution video from YouTube.
