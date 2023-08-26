@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter import filedialog
-from main import YouTubeDownloader, get_vid_link
+from src.downloader import YouTubeDownloader, get_vid_link
 
 class YouTubeDownloaderGUI:
     def __init__(self, master, downloader):
